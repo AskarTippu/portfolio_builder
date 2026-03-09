@@ -1,0 +1,94 @@
+.header {
+  background: var(--surface, linear-gradient(90deg, #13131a, #1a1a28));
+  border-bottom: 1px solid var(--border, #2a2a3a);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  background: var(--gradient, linear-gradient(90deg, #7c6af7, #a78bfa));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btnPrimary,
+.btnSecondary {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, #7c6af7, #a78bfa);
+  border: none;
+  color: #fff;
+}
+
+.btnSecondary {
+  background: var(--surface, #1a1a24);
+  border: 1px solid var(--border, #2a2a3a);
+  color: var(--text, #e8e8f0);
+}
+
+.btnPrimary:hover,
+.btnSecondary:hover {
+  opacity: 0.85;
+}
+
+/* toggle switch styles */
+.toggleBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.toggleTrack {
+  width: 40px;
+  height: 20px;
+  background: var(--toggle-color, #000);
+  border-radius: 10px;
+  position: relative;
+  transition: background 0.2s;
+}
+.toggleTrack[data-dark="false"] {
+  background: #fff;
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s, background 0.2s;
+}
+.toggleThumb[data-dark="true"] {
+  transform: translateX(20px);
+  background: #000;
+}
+
+.toggleLabel {
+  font-size: 13px;
+  color: var(--text, #e8e8f0);
+}
